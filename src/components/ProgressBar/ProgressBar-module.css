@@ -1,0 +1,41 @@
+.progressBar {
+    height: 20px;
+    width: 350px;
+    margin: 10px;
+    border-radius: 5px;
+    background: gray;
+}
+.progress {
+    color: white;
+}
+
+.progress-info {
+    background-color: blue;
+}
+
+.progress-success {
+    background-color: green;
+}
+
+.progress-warning {
+    background-color: orange;
+}
+
+.progress-danger {
+    background-color: red;
+}
+
+.stripes {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                        transparent 75%, transparent);
+}
+
+.animated {
+    animation: animate-stripes 3s linear infinite;
+}
+
+@keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
