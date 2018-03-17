@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import NameCard from './components/Namecard/Namecard';
+
 
 class App extends Component {
   render() {
     return (
-        <h1>Stebbi</h1>
+        <NameCard
+            name='stefan'
+            email='steafn'
+            telephone='stefan'
+            image='https://www.w3schools.com/howto/img_avatar.png'/>
     );
   }
 }
