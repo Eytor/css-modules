@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
 class App extends Component {
   render() {
     return (
-        <h1>Stebbi</h1>
+        <div>
+            <ProgressBar progress={90}
+            state="success"/>
+        </div>
     );
   }
 }

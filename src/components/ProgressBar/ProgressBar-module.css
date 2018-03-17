@@ -7,6 +7,7 @@
 }
 .progress {
     color: white;
+    text-align: center;
 }
 
 .progress-info {
@@ -27,13 +28,13 @@
 
 .stripes {
     background-size: 30px 30px;
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    background-image: linear-gradient(-135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
                         transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
                         transparent 75%, transparent);
 }
 
 .animated {
-    animation: animate-stripes 3s linear infinite;
+    animation: animate-stripes 2s linear infinite;
 }
 
 @keyframes animate-stripes {
