@@ -1,0 +1,11 @@
+.gridContainer {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
