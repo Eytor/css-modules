@@ -15,7 +15,10 @@ const ProgressBar = ({ progress, striped, animated, state }) => {
 };
 
 ProgressBar.propTypes = {
-    progress: PropTypes.number.isRequired,
+    progress: (props, propName) => {
+        if (props[propName] >= 0 && props[propName] <=100) {return;}
+        return new Error('Number should be between 0 and 100');
+    },
     striped: PropTypes.bool,
     animated: PropTypes.bool,
     state: PropTypes.oneOf([ 'info', 'success', 'warning', 'danger' ]).isRequired
