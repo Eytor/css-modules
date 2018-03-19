@@ -1,0 +1,55 @@
+.modalOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+}
+
+.modalClose {
+    position: absolute;
+    top: 10px;
+    right:10px;
+    transition: color 1s;
+}
+
+.modalClose:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modalTitle {
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.modalBody {
+    padding: 20px;
+    height:170px;
+
+}
+
+.modalFooter{
+    height: 50px;
+    padding: 20px;
+    color: black;
+}

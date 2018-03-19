@@ -1,0 +1,37 @@
+.container {
+    position: relative;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+}
+.prev:hover, .next:hover {
+   background-color: rgba(255,255,255,0.3);
+}
+.next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left:10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-small {
+    width: 250px;
+    height: 100px;
+}
+.carousel-medium {
+    width: 500px;
+    height: 200px;
+}
+.carousel-large {
+    width: 750px;
+    height: 300px;
+}
+.container img{
+    vertical-align: middle;
+    height: inherit;
+    width: inherit;
+}
