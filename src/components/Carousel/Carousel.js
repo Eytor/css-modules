@@ -30,7 +30,7 @@ class Carousel extends React.Component {
             <div className={`${styles.container} ${styles[`carousel-${this.state.size}`]}`}>
                     <img src={this.state.images[this.state.index]} alt=""/>
                     <a className={`${styles.prev}`} onClick={() => this.changeSlide(-1)}><i class="fas fa-arrow-circle-left"></i></a>
-                    <a className={`${styles.next}`} onClick={() => this.changeSlide(1)}><i class="fas fa-arrow-circle-left"></i></a>
+                    <a className={`${styles.next}`} onClick={() => this.changeSlide(1)}><i class="fas fa-arrow-circle-right"></i></a>
             </div>
         )
     }
