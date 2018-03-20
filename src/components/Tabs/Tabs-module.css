@@ -8,8 +8,7 @@
 }
 
 .show {
-    margin-top: 50px;
-    display: block !important;
+    display: inline-block !important;
     position: absolute;
     left: 0px;
 

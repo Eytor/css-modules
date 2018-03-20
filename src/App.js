@@ -65,7 +65,7 @@ class App extends Component {
                 <Col size={3}>4</Col>
             </Row>
             <h1>9</h1>
-            <Tabs theme='light' onSelect={newTab => this.setState({ tab: newTab })} currentSelectedTab={this.state.tab} >
+            <Tabs theme='dark' layout='horizontal' onSelect={newTab => this.setState({ tab: newTab })} currentSelectedTab={this.state.tab} >
 
                 <Tab selectionKey={1} title="tab 1">numer 1</Tab>
                 <Tab selectionKey={2} title="tab 2">numer 2</Tab>

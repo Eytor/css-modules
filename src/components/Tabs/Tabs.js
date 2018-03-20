@@ -10,7 +10,8 @@ class Tabs extends React.Component {
             theme: this.props.theme,
             children: this.props.children,
             onSelect: this.props.onSelect,
-            currentSelectedTab: this.props.currentSelectedTab
+            currentSelectedTab: this.props.currentSelectedTab,
+            layout: this.props.layout
 
         };
         this.handleClick = this.handleClick.bind(this);
@@ -30,13 +31,14 @@ class Tabs extends React.Component {
                     return React.cloneElement(child, {
                         show: show,
                         handleClick: this.handleClick.bind(this),
-                        theme: this.state.theme
+                        theme: this.state.theme,
+                        layout: this.state.layout
                     });
                 }
                 return React.cloneElement(child, {
                     handleClick: this.handleClick.bind(this),
-                    theme: this.state.theme
-
+                    theme: this.state.theme,
+                    layout: this.state.layout
                 });
             })
             return (

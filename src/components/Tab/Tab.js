@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Tab-module.css';
 
-const Tab = ({selectionKey, title, children, handleClick, theme, show }) => {
+const Tab = ({selectionKey, title, children, handleClick, theme, show, layout }) => {
     return (
-        <div>
+        <div className={`${style[`${layout}`]}`}>
             <div className={`${style[`${theme}`]}`} onClick={() => handleClick(selectionKey)}>{title}</div>
-            <div className={`${style.box}  ${show} `}  id={selectionKey}>{selectionKey}</div>
+            <div className={`${style[`box-${theme}`]}  ${show} `}  id={selectionKey}>{selectionKey}</div>
         </div>
     );
 }

@@ -1,7 +1,7 @@
 .light {
-    background-color: red;
-    float: left;
-    border: 1px solid black;
+    background-color: #c3d8cf;
+    color: black;
+    border: 0.5px solid black;
     outline: black;
     cursor: pointer;
     padding: 14px 16px;
@@ -9,16 +9,42 @@
     border-radius: 5px;
 }
 
-.layout:hover {
+.dark {
+    background-color: #0b261a;
+    color: #0ea300;
+    border: 0.5px solid black;
+    cursor:pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.light:hover {
     background-color: #ddd;
 }
 
-.layout:active {
-    display: block;
+.dark:hover {
+    background-color:#2b7f2b;
 }
 
-.box {
-    width: 150px;
+.box-light {
+    width: 50%;
     height: 150px;
     display: none;
+    background-color: #cecec5;
+}
+
+.box-dark {
+    width: 50%;
+    height: 150px;
+    display: none;
+    background-color: #3a423b;
+}
+
+.horizontal {
+    float: left;
+}
+
+.vertical {
+    width: 15%;
 }
