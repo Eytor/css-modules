@@ -6,6 +6,8 @@ import Carousel from './components/Carousel/Carousel';
 import Row from './components/Row/Row';
 import Col from './components/Col/Col';
 import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
+import Tabs from './components/Tabs/Tabs';
+import Tab from './components/Tab/Tab';
 
 class App extends Component {
     constructor(props) {
@@ -42,6 +44,15 @@ class App extends Component {
                 <Col size={6}>Eythor</Col>
             </Row>
 
+
+
+            <h1>9</h1>
+            <Tabs theme='light' onSelect={() => console.log()} >
+                <Tab selectionKey={1} title="tab 1">numer 1</Tab>
+                <Tab selectionKey={2} title="tab 2">numer 2</Tab>
+                <Tab selectionKey={3} title="tab 3">numer 3</Tab>
+            </Tabs>
+            <h1>10</h1>
             <CartoonNetworkSpinner />
             <Modal isOpen={isModalOpen} onClose={() => this.setState({ isModalOpen: false})}>
                 <Modal.Title>Title</Modal.Title>
