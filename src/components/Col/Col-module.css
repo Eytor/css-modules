@@ -3,14 +3,21 @@
 .default {
     float: left;
     min-height: 1px;
-    /*-- our gutter -- */
-    padding: 12px;
     background-color: #FFDCDC;
 }
 
-.col {
-    display: inline-block;
+.block {
+    background-color: #b39ddb;
+    color: white;
 }
+
+.col {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 12px;
+    border: 0.1px solid black;
+}
+
 
 .col-1 { width: 8.33%; }
 

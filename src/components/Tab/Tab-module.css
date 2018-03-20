@@ -1,4 +1,4 @@
-.layout {
+.light {
     background-color: red;
     float: left;
     border: 1px solid black;
@@ -11,4 +11,14 @@
 
 .layout:hover {
     background-color: #ddd;
+}
+
+.layout:active {
+    display: block;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    display: none;
 }

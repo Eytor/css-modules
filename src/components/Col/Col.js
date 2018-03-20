@@ -4,7 +4,7 @@ import style from './Col-module.css';
 
 const Col = ({ size, children, color }) => {
     return (
-        <div className={`${style.col} ${style[`col-${size}`]} ${style[`background`]}  `}>{children}</div>
+        <div className={`${style.col} ${style[`col-${size}`]} ${style.block}  `}>{children}</div>
     )
 }
 

@@ -1,30 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './Tabs-module.css';
+import style, {show} from './Tabs-module.css';
 
 
-
-export default class Tabs extends React.Component {
+class Tabs extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             theme: this.props.theme,
-            child: this.props.child,
-            onSelect: this.props.onSelect
+            children: this.props.children,
+            onSelect: this.props.onSelect,
+            currentSelectedTab: this.props.currentSelectedTab
 
         };
+        this.handleClick = this.handleClick.bind(this);
     }
-    render () {
-        return (
-            <div className={`${this.props.theme}`}>
-                {React.Children.map(this.props.children, (child, i) => {
-                    return (
-                        <div onClick={() => this.props.onSelect(child.key)}>{child}</div>
-                    )
-                })}
 
-            </div>
-        );
+    handleClick(tabIndex) {
+        this.setState({
+            currentSelectedTab: tabIndex === this.state.currentSelectedTab ? this.state.activeTabIndex : tabIndex
+        });
+    }
+
+    render () {
+            var children = React.Children.map(this.props.children, child => {
+                if (child.props.key === this.state.currentSelectedTab) {
+                    return React.cloneElement(child, {
+                        show: show,
+                        handleClick: this.handleClick.bind(this),
+                        theme: this.state.theme
+                    });
+                }
+                return React.cloneElement(child, {
+                    handleClick: this.handleClick.bind(this),
+                    theme: this.state.theme
+
+                });
+            })
+            return (
+                <div className={`${style.theme}`}>{children}</div>
+            )
     };
 }
 
@@ -32,11 +47,15 @@ export default class Tabs extends React.Component {
 
 Tabs.propTypes = {
     theme: PropTypes.oneOf(['light','dark']),
-    child: PropTypes.node,
+    layout: PropTypes.oneOf(['vertical', 'horizontal']),
+    children: PropTypes.node,
     onSelect: PropTypes.func.isRequired,
-    currentSelected: PropTypes.number
+    currentSelectedTab: PropTypes.number
 }
 
 Tabs.defaultProps = {
     theme: 'light',
+    layout: 'horizontal'
 }
+
+export default Tabs;
