@@ -6,7 +6,7 @@ const Tab = ({selectionKey, title, children, handleClick, theme, show }) => {
     return (
         <div>
             <div className={`${style[`${theme}`]}`} onClick={() => handleClick(selectionKey)}>{title}</div>
-            <div className={`${style.box}`}  id={selectionKey}>{selectionKey}</div>
+            <div className={`${style.box}  ${show} `}  id={selectionKey}>{selectionKey}</div>
         </div>
     );
 }

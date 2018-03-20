@@ -23,7 +23,6 @@ class Carousel extends React.Component {
         else {
             this.setState({index: newIndex});
         }
-        console.log(newIndex);
     }
     render () {
         return (
