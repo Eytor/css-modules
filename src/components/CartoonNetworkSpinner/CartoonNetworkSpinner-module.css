@@ -1,0 +1,13 @@
+.spinner {
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    animation: spin 3s infinite;
+}
+
+.spinner img {
+    height: inherit;
+    width: inherit;
+}
+
+@keyframes spin { 25%, 100% { transform:rotate(720deg); }}
