@@ -15,8 +15,8 @@ class CartoonNetworkSpinner extends React.Component {
         setInterval(() => {
             this.changeImage();
         }, this.props.interval*1000);
-    }
-    changeImage = () => {
+    };
+    changeImage () {
         var newIndex = this.state.index + 1;
         if (newIndex >= this.state.images.length) {
             this.setState({index: 0});

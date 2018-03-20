@@ -25,9 +25,7 @@ class Tabs extends React.Component {
 
     render () {
             var children = React.Children.map(this.props.children, child => {
-                console.log("selectionKey:" + child.props.selectionKey);
-                console.log("currentSelectedTab: " + this.state.currentSelectedTab);
-                if (child.props.selectionKey == this.state.currentSelectedTab) {
+                if (child.props.selectionKey === this.state.currentSelectedTab) {
                     return React.cloneElement(child, {
                         show: show,
                         handleClick: this.handleClick.bind(this),

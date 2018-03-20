@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import ProgressBar from './components/ProgressBar/ProgressBar';
-import NameCard from './components/Namecard/Namecard';
-import Modal from './components/Modal/Modal';
-import Carousel from './components/Carousel/Carousel';
-import Row from './components/Row/Row';
-import Col from './components/Col/Col';
-import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
-import Tabs from './components/Tabs/Tabs';
-import Tab from './components/Tab/Tab';
+import ProgressBar from './components/ProgressBar';
+import NameCard from './components/Namecard';
+import Modal from './components/Modal';
+import Carousel from './components/Carousel';
+import Row from './components/Row';
+import Col from './components/Col';
+import CartoonNetworkSpinner from './components/CartoonNetworkSpinner';
+import Tabs from './components/Tabs';
+import Tab from './components/Tab';
 
 class App extends Component {
     constructor(props) {
@@ -65,7 +65,7 @@ class App extends Component {
                 <Col size={3}>4</Col>
             </Row>
             <h1>9</h1>
-            <Tabs theme='dark' layout='horizontal' onSelect={newTab => this.setState({ tab: newTab })} currentSelectedTab={this.state.tab} >
+            <Tabs theme='dark' layout='vertical' onSelect={newTab => this.setState({ tab: newTab })} currentSelectedTab={this.state.tab} >
 
                 <Tab selectionKey={1} title="tab 1">numer 1</Tab>
                 <Tab selectionKey={2} title="tab 2">numer 2</Tab>
